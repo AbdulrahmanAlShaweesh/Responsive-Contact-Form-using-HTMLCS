@@ -97,6 +97,11 @@ textarea {
   cursor: pointer;
   color: var(--field-bc);
   font-size: 20px;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #27ae60;
 }
 
 /* small screen */
@@ -121,8 +126,7 @@ textarea {
 
 /* medium screen */
 @media screen and (max-width: 768px) {
-
-    .container .container-box {
-        width: 80vw;
-    }
+  .container .container-box {
+    width: 80vw;
+  }
 }
