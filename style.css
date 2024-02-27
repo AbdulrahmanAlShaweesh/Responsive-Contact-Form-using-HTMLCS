@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom, #d3e4ee 10%, #bba697);
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  --main-white-bc: #ffffff;
+  --field-bc: #f2f2f2;
+  --button-bc: #22a167;
+}
+
+.container {
+  width: 100%;
+  height: 70vh;
+}
+
+.container .container-box {
+  width: 60vw;
+  margin: auto;
+  height: 100%;
+  box-shadow: 3px 3px 19px 1px rgb(132, 125, 125);
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .container-box .right {
+  background-color: var(--main-white-bc);
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 35px;
+}
+
+.container .container-box .right h3 {
+  /* height: 5px; */
+  position: relative;
+  text-transform: capitalize;
+  font-size: 23px;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.container .container-box .right h3::before {
+  content: "";
+  width: 50%;
+  height: 3px;
+  background-color: var(--button-bc);
+  position: absolute;
+  bottom: -3px;
+  left: 25px;
+}
+
+.container .container-box .right :nth-child(2) {
+  margin-top: 15px;
+}
+
+.container .container-box .right input,
+.btn {
+  width: 80%;
+  margin: 15px 0;
+  background-color: var(--field-bc);
+  border: 0;
+  outline: none;
+  padding: 15px;
+}
+
+textarea {
+  width: 80%;
+  height: 200px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.container .container-box .left {
+  height: 100%;
+  width: 50%;
+  background-image: url(./assets/image.jpeg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-origin: content-box;
+}
+
+.btn {
+  background-color: var(--button-bc);
+  cursor: pointer;
+  color: var(--field-bc);
+  font-size: 20px;
+}
+
+/* small screen */
+@media screen and (min-width: 300px) and (max-width: 576px) {
+  .container-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    height: 90vh;
+    background-size: cover;
+  }
+  .container .container-box .left {
+    height: 100%;
+    width: 100%;
+    /* background-image: url(./assets/image.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+  }
+}
+
+/* medium screen */
+@media screen and (max-width: 768px) {
+
+    .container .container-box {
+        width: 80vw;
+    }
+}
